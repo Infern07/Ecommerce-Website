@@ -22,7 +22,9 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body
+    class="font-jakarta bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen"
+  >
     <header class="bg-gray-800 text-white p-4">
       <div class="container mx-auto flex justify-between items-center">
         <div class="flex items-center">
@@ -45,6 +47,37 @@
         </button>
       </div>
     </header>
+    <div class="bg-gray-300 py-4">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8"
+      >
+        <!-- Search Bar -->
+        <div class="flex-grow flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Search Icon -->
+            <span
+              class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-400"
+            >
+              <i class="fas fa-search"></i>
+            </span>
+            <!-- Input Field -->
+            <input
+              type="text"
+              placeholder="Search for furniture..."
+              class="w-full pl-8 bg-transparent border-b-2 border-gray-500 py-1 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        </div>
+        <!-- Icons -->
+        <div class="flex items-center space-x-6 space -mx-4">
+          <!-- Cart Icon -->
+          <i class="fas fa-shopping-cart text-gray-600 text-xl"></i>
+          <!-- Profile Icon -->
+          <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+        </div>
+      </div>
+    </div>
+
     <section
       class="relative bg-gray-900 text-white h-[400px] flex items-center justify-center"
     >
@@ -85,17 +118,17 @@
           >
             <div class="h-56 overflow-hidden">
               <img
-                src="./assets/images/hero-product-2.jpg"
+                src="./assets/images/elegantsofa.png"
                 alt="Elegant Sofa"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover py-5"
               />
             </div>
             <div class="p-4">
-              <h3 class="text-xl font-semibold">Elegant Sofa</h3>
+              <h3 class="text-xl font-semibold mt-8">Elegant Sofa</h3>
               <p class="text-gray-600">Rs 40,000.00</p>
               <a
                 href="#"
-                class="block mt-16 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
                 >View Details</a
               >
             </div>
@@ -107,7 +140,7 @@
           >
             <div class="h-64 overflow-hidden">
               <img
-                src="./assets/images/product-8.jpg"
+                src="./assets/images/lmap.jpg"
                 alt="Modern Lamp"
                 class="w-full h-full object-cover"
               />
@@ -129,7 +162,7 @@
           >
             <div class="h-64 overflow-hidden">
               <img
-                src="./assets/images/product-10.jpg"
+                src="./assets/images/comfychair.jpg"
                 alt="Comfy Chair"
                 class="w-full h-full object-cover"
               />
@@ -144,6 +177,87 @@
               >
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section py-12 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center mb-8">
+          Shop by Categories
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <div
+            class="category-card rounded-lg overflow-hidden shadow-md bg-white hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./assets/images/Pashe_Dining_Chair_TL.jpg"
+              alt="Chairs"
+              class="w-full h-48 object-cover transition duration-300 filter grayscale hover:filter-none"
+            />
+            <div class="p-4">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800"
+              >
+                Chairs
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="category-card rounded-lg overflow-hidden shadow-md bg-white hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./assets/images/sofas.jpg"
+              alt="Sofas"
+              class="w-full h-48 object-cover transition duration-300 filter grayscale hover:filter-none"
+            />
+            <div class="p-4">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800"
+              >
+                Sofas
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="category-card rounded-lg overflow-hidden shadow-md bg-white hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./assets/images/blog-1.jpg"
+              alt="Tables"
+              class="w-full h-48 object-cover transition duration-300 filter grayscale hover:filter-none"
+            />
+            <div class="p-4">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800"
+              >
+                Tables
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="category-card rounded-lg overflow-hidden shadow-md bg-white hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./assets/images/wardrobe.jpg"
+              alt="Wardrobes"
+              class="w-full h-48 object-cover transition duration-300 filter grayscale hover:filter-none"
+            />
+            <div class="p-4">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800"
+              >
+                Wardrobes
+              </h3>
+            </div>
+          </div>
+
+          <!-- Add more categories as needed -->
         </div>
       </div>
     </section>

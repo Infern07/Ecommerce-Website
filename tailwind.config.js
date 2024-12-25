@@ -8,6 +8,9 @@ module.exports = {
         ysabeau: ['Ysabeau SC', 'serif'],
       },
     },
+    boxShadow: {
+      'custom': '0 1.2px 1.2px rgba(0, 0, 0, 0.8)',
+    },
   },
   plugins: [],
 };

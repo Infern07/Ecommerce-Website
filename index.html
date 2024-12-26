@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <link rel="icon" href="./assets/images/house-solid.svg" />
-    <meta cha₹et="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NestCraft</title>
     <link href="./assets/css/style.css" rel="stylesheet" />
@@ -37,7 +37,7 @@
         </div>
 
         <nav class="hidden md:flex font-jakarta space-x-6">
-          <a href="#" class="hover:text-yellow-500">Home</a>
+          <a href="index.html" class="hover:text-yellow-500">Home</a>
           <a href="#" class="hover:text-yellow-500">Shop</a>
           <a href="#" class="hover:text-yellow-500">About</a>
           <a href="#" class="hover:text-yellow-500">Contact</a>
@@ -73,7 +73,9 @@
           <!-- Cart Icon -->
           <i class="fas fa-shopping-cart text-gray-600 text-xl"></i>
           <!-- Profile Icon -->
-          <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+          <a href="./login.html"
+            ><i class="fas fa-user-circle text-gray-600 text-xl"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -100,17 +102,21 @@
             background-image: url('./assets/images/Oasis_main_headder.png');
           "
         ></div>
+        <div
+          class="bg-center bg-cover flex-shrink-0 w-[100vw] h-[400px] opacity-80"
+          style="background-image: url('./assets/images/slideshow_oasis.png')"
+        ></div>
       </div>
 
       <!-- Text Content -->
       <div class="relative text-center z-10">
         <h1
-          class="text-4xl drop-shadow md:text-6xl font-bold font-jakarta mb-4 bg-gradient-to-r from-black to-gray-500 text-transparent bg-clip-text outline-red-300"
+          class="text-4xl drop-shadow md:text-6xl font-bold font-jakarta mb-4 bg-gradient-to-b from-black to-gray-600 text-transparent bg-clip-text outline-red-300"
         >
           Furnish Your Dream Home
         </h1>
         <p
-          class="text-lg font-jakarta md:text-xl mb-6 bg-gradient-to-r from-black to-gray-400 text-transparent bg-clip-text font-semibold"
+          class="text-lg font-jakarta md:text-xl mb-6 bg-gradient-to-b from-black to-gray-600 text-transparent bg-clip-text font-semibold"
         >
           Modern. Stylish. Affordable.
         </p>
@@ -432,6 +438,23 @@
                 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800"
               >
                 Beds
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="category-card rounded-lg overflow-hidden shadow-md bg-white hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./assets/images/bookshelves.jpg"
+              alt="beds"
+              class="w-full h-48 object-cover transition duration-300 filter grayscale hover:filter-none"
+            />
+            <div class="p-4">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800"
+              >
+                Bookshelves
               </h3>
             </div>
           </div>

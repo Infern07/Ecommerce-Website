@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="icon" href="./assets/images/table-lamp.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col font-jakarta">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-3">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="index.html" class="text-2xl font-ysabeau font-bold"
+            >NestCraft</a
+          >
+          <img
+            src="./assets/images/Untitled.png"
+            alt="NestCraft Logo"
+            class="h-12 ml-4"
+          />
+        </div>
+
+        <nav class="hidden md:flex font-jakarta space-x-6 mr-8">
+          <a href="index.html" class="hover:text-yellow-500">Home</a>
+          <a href="index.html#about" class="hover:text-yellow-500">About</a>
+          <a href="index.html#contact" class="hover:text-yellow-500"
+            >Contact</a
+          >
+        </nav>
+        <button class="md:hidden p-2 text-gray-300 hover:text-white">
+          <i class="fa-solid fa-compass text-3xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto p-4">
+      <h2 class="text-2xl font-bold mb-6">Your Cart</h2>
+
+      <!-- Cart Items -->
+      <div class="space-y-4">
+        <div
+          class="grid grid-cols-1 border md:grid-cols-4 gap-4 bg-white p-4 rounded-lg shadow-md items-center"
+        >
+          <div class="flex items-center col-span-2 md:col-span-1">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Item"
+              class="w-20 h-20 object-cover rounded-md shadow-sm"
+            />
+            <div class="ml-4">
+              <p class="text-lg font-bold">Sleek Chair</p>
+            </div>
+          </div>
+          <div>
+            <input
+              type="number"
+              min="1"
+              class="border-gray-300 rounded-lg w-16 px-2 py-1"
+              value="1"
+            />
+          </div>
+          <p class="text-base md:text-lg font-bold">$200</p>
+          <button
+            class="text-red-600 font-semibold hover:text-red-800 md:text-center"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="mt-8 bg-white p-6 rounded-lg shadow-md border">
+        <h3 class="text-lg font-semibold">Summary</h3>
+        <div class="flex justify-between mt-4">
+          <span>Subtotal</span>
+          <span>$200</span>
+        </div>
+        <div class="flex justify-between mt-2">
+          <span>Tax</span>
+          <span>$20</span>
+        </div>
+        <div class="flex justify-between font-bold mt-4 text-xl">
+          <span>Total</span>
+          <span>$220</span>
+        </div>
+        <button
+          class="primary-btn bg-green-500 w-full mt-4 p-3 rounded-md text-center font-semibold hover:bg-green-600 hover:text-white"
+        >
+          Checkout
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

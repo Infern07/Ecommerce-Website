@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <link rel="icon" href="./assets/images/house-solid.svg" />
+    <link rel="icon" href="./assets/images/table-lamp.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NestCraft</title>
@@ -15,7 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,7 @@
   <body
     class="font-jakarta bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen"
   >
-    <header class="bg-gray-800 text-white p-3">
+    <header class="bg-gray-800 text-white p-2">
       <div class="container mx-auto flex justify-between items-center">
         <div class="flex items-center">
           <a href="#" class="text-2xl font-ysabeau font-bold">NestCraft</a>
@@ -40,7 +40,10 @@
           class="bg-gradient-to-r from-yellow-500 to-orange-500 text-center py-6 drop-shadow-sm text-transparent bg-clip-text"
         >
           <h2 class="text-xl md:text-2xl font-semibold">
-            Discover Your Dream Furniture - Special Discounts This Season!
+            Discover Your Dream Furniture - Special Discounts This Season!<span
+              class="text-white"
+              >🎊</span
+            >
           </h2>
         </section>
 
@@ -78,7 +81,10 @@
         <!-- Icons -->
         <div class="flex items-center space-x-8 grid-cols-2 -mr-4">
           <!-- Cart Icon -->
-          <i class="fas fa-shopping-cart text-gray-600 text-xl"></i>
+          <a href="./cart.html"
+            ><i class="fas fa-shopping-cart text-gray-600 text-xl"></i
+          ></a>
+
           <!-- Profile Icon -->
           <a href="./login.html"
             ><i class="fas fa-user-circle text-gray-600 text-xl"></i
@@ -488,7 +494,7 @@
       </div>
     </section>
 
-    <section id="contact" class="py-8">
+    <section id="contact" class="py-8 -scroll-mt-72">
       <div class="container mx-auto px-6 md:px-12 lg:px-20">
         <h2
           class="text-3xl md:text-4xl font-extrabold text-gray-800 text-center mb-8"
@@ -570,13 +576,12 @@
       </div>
     </section>
     <a
-  href="#top"
-  class="fixed bottom-8 right-8 bg-blue-600 flex text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 items-center justify-center"
-  aria-label="Back to Top"
->
-  ↑
-</a>
-
+      href="#top"
+      class="fixed bottom-8 right-8 bg-blue-600 flex text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 items-center justify-center"
+      aria-label="Back to Top"
+    >
+      ↑
+    </a>
 
     <footer class="bg-gray-800 text-gray-300 py-6">
       <div class="container mx-auto text-center space-y-4">
@@ -589,6 +594,5 @@
     </footer>
 
     <script src="./assets/js/script.js"></script>
-
   </body>
 </html>

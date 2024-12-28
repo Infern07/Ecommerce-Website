@@ -16,8 +16,6 @@ const addEventOnElem = function (elem, type, callback) {
   }
 }
 
-
-
 /**
  * navbar toggle
  */
@@ -84,3 +82,4 @@ const filter = function () {
 }
 
 addEventOnElem(filterBtns, "click", filter);
+

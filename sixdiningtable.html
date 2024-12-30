@@ -1,0 +1,121 @@
+<html lang="en">
+  <head>
+    <link rel="icon" href="./assets/images/table-lamp.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NestCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ysabeau+SC:wght@1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-jakarta">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-md">
+        <div
+          class="container mx-auto px-4 flex items-center justify-between h-16"
+        >
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="/" class="text-2xl font-bold font-ysabeau text-white"
+              >NestCraft</a
+            >
+            <img
+              src="./assets/images/Untitled.png"
+              alt="NestCraft Logo"
+              class="h-10 ml-2"
+            />
+          </div>
+          <!-- Links -->
+          <ul class="flex space-x-6 mr-8">
+            <li>
+              <a href="index.html" class="text-white hover:text-orange-400"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#bestseller"
+                class="text-white hover:text-orange-400"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#contact"
+                class="text-white hover:text-orange-400"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Product Image -->
+        <div>
+          <img src="./assets/images/diningtable.jpg" alt="6-Seater Dining Table" class="w-full rounded-lg shadow-lg" />
+        </div>
+
+        <!-- Product Details -->
+        <div>
+          <h1 class="text-3xl font-bold text-gray-800 mb-4">6-Seater Dining Table</h1>
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 text-xl mr-2">★★★★★</div>
+            <span class="text-gray-600">(4.7 out of 5)</span>
+          </div>
+          <p class="text-gray-600 mb-6">
+            The perfect centrepiece for your dining room, this 6-seater dining table combines modern aesthetics with robust build quality.
+          </p>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">Specifications:</h3>
+            <ul class="list-disc pl-5 text-gray-600">
+              <li>Material: Solid Wood</li>
+              <li>Dimensions: 72 x 36 x 30 inches</li>
+              <li>Seating Capacity: 6</li>
+              <li>Finish: Dark Walnut</li>
+            </ul>
+          </div>
+          <div class="text-2xl font-semibold text-gray-800 my-4">₹ 14,000.00</div>
+          <!-- Buttons -->
+          <div class="flex space-x-4">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md">Add to Cart</button>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Content -->
+      <div class="py-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Why Choose Us?</h2>
+        <p class="text-gray-600">NestCraft combines craftsmanship and functionality to deliver the best dining experience. Upgrade your dining room today!</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-center text-white">&copy; 2024 NestCraft. All rights reserved.</footer>
+  </body>
+</html>

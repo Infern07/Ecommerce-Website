@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="./assets/images/table-lamp.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NestCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ysabeau+SC:wght@1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-jakarta">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-md">
+      <div
+        class="container mx-auto px-4 flex items-center justify-between h-16"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="/" class="text-2xl font-bold font-ysabeau text-white"
+            >NestCraft</a
+          >
+          <img
+            src="./assets/images/Untitled.png"
+            alt="NestCraft Logo"
+            class="h-10 ml-2"
+          />
+        </div>
+        <!-- Links -->
+        <ul class="flex space-x-6 mr-8">
+          <li>
+            <a href="index.html" class="text-white hover:text-orange-400"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#bestseller"
+              class="text-white hover:text-orange-400"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#contact"
+              class="text-white hover:text-orange-400"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Product Image -->
+        <div>
+          <img
+            src="./assets/images/Megatron_Bed_Dark_Grey_1.jpg"
+            alt="Kids Megatron Bed"
+            class="w-full rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- Product Details -->
+        <div>
+          <h1 class="text-3xl font-bold text-gray-800 mb-4">
+            Kids Megatron Bed
+          </h1>
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 text-xl mr-2">★★★★★</div>
+            <span class="text-gray-600">(4.9 out of 5)</span>
+          </div>
+          <p class="text-gray-600 mb-6">
+            A playful yet functional design, the Kids Megatron Bed provides
+            comfort, storage, and style for your little ones.
+          </p>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Specifications:
+            </h3>
+            <ul class="list-disc pl-5 text-gray-600">
+              <li>Material: Engineered Wood</li>
+              <li>Dimensions: 78 x 40 x 35 inches</li>
+              <li>Storage: 2 Drawers and Shelves</li>
+              <li>Colour: Dark Grey</li>
+            </ul>
+          </div>
+          <div class="text-2xl font-semibold text-gray-800 my-4">
+            ₹ 14,499.00
+          </div>
+          <!-- Buttons -->
+          <div class="flex space-x-4">
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md"
+            >
+              Add to Cart
+            </button>
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Content -->
+      <div class="py-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Why Choose Us?</h2>
+        <p class="text-gray-600">
+          With NestCraft's Kids Megatron Bed, give your kids the ultimate space
+          to dream, play, and grow. Designed with love and functionality in
+          mind.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-center text-white">
+      &copy; 2024 NestCraft. All rights reserved.
+    </footer>
+  </body>
+</html>

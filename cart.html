@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
+    <title>NestCraft | Cart</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="dist/output.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -55,32 +55,9 @@
       <!-- Cart Items -->
       <div class="space-y-4">
         <div
-          class="grid grid-cols-1 border md:grid-cols-4 gap-4 bg-white p-4 rounded-lg shadow-md items-center"
+          class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-white p-4 rounded-lg items-center"
         >
-          <div class="flex items-center col-span-2 md:col-span-1">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Item"
-              class="w-20 h-20 object-cover rounded-md shadow-sm"
-            />
-            <div class="ml-4">
-              <p class="text-lg font-bold">Sleek Chair</p>
-            </div>
-          </div>
-          <div>
-            <input
-              type="number"
-              min="1"
-              class="border-gray-300 rounded-lg w-16 px-2 py-1"
-              value="1"
-            />
-          </div>
-          <p class="text-base md:text-lg font-bold">$200</p>
-          <button
-            class="text-red-600 font-semibold hover:text-red-800 md:text-center"
-          >
-            Remove
-          </button>
+     
         </div>
       </div>
 
@@ -89,15 +66,15 @@
         <h3 class="text-lg font-semibold">Summary</h3>
         <div class="flex justify-between mt-4">
           <span>Subtotal</span>
-          <span>$200</span>
+          <span>$0</span>
         </div>
         <div class="flex justify-between mt-2">
           <span>Tax</span>
-          <span>$20</span>
+          <span>$0</span>
         </div>
         <div class="flex justify-between font-bold mt-4 text-xl">
           <span>Total</span>
-          <span>$220</span>
+          <span>$0</span>
         </div>
         <button
           class="primary-btn bg-green-500 w-full mt-4 p-3 rounded-md text-center font-semibold hover:bg-green-600 hover:text-white"
@@ -106,5 +83,118 @@
         </button>
       </div>
     </main>
+    <footer class="bg-gray-800 text-gray-300 py-6">
+      <div class="container mx-auto text-center space-y-4">
+        <p>&copy; 2024 NestCraft. All rights reserved.</p>
+        <div class="space-x-4">
+          <a href="#" class="hover:text-yellow-500">Privacy Policy</a>
+          <a href="#" class="hover:text-yellow-500">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cartContainer = document.querySelector(".space-y-4");
+    const subtotalElement = document.querySelector(".mt-4 span:last-child");
+    const taxElement = document.querySelector(".mt-2 span:last-child");
+    const totalElement = document.querySelector(".text-xl span:last-child");
+
+    // Get Cart from LocalStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+      subtotalElement.textContent = "$0";
+      taxElement.textContent = "$0";
+      totalElement.textContent = "$0";
+      return;
+    }
+
+    // Display Cart Items
+    let subtotal = 0;
+    cart.forEach((item, index) => {
+      subtotal += parseFloat(item.price);
+
+      const cartItem = document.createElement("div");
+      cartItem.classList.add(
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-4",
+        "gap-4",
+        "bg-white",
+        "p-4",
+        "rounded-lg",
+        "shadow-md",
+        "items-center",
+        "border"
+      );
+      cartItem.innerHTML = `
+        <div class="flex items-center col-span-2 md:col-span-1">
+          <img
+            src="${item.image}"
+            alt="${item.name}"
+            class="w-20 h-20 object-cover rounded-md shadow-sm"
+          />
+          <div class="ml-4">
+            <p class="text-lg font-bold">${item.name}</p>
+          </div>
+        </div>
+        <div>
+          <input
+            type="number"
+            min="1"
+            class="border-gray-300 rounded-lg w-16 px-2 py-1 quantity-input"
+            value="1"
+            data-index="${index}"
+          />
+        </div>
+        <p class="text-base md:text-lg font-bold">$${item.price}</p>
+        <button
+          class="text-red-600 font-semibold hover:text-red-800 remove-btn"
+          data-index="${index}"
+        >
+          Remove
+        </button>
+      `;
+
+      cartContainer.appendChild(cartItem);
+    });
+
+    // Update Summary
+    const tax = subtotal * 0.1; // Assume 10% Tax
+    const total = subtotal + tax;
+    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    taxElement.textContent = `$${tax.toFixed(2)}`;
+    totalElement.textContent = `$${total.toFixed(2)}`;
+
+    // Remove Item from Cart
+    document.querySelectorAll(".remove-btn").forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        const index = event.target.dataset.index;
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload();
+      });
+    });
+
+    // Handle Quantity Change
+    document.querySelectorAll(".quantity-input").forEach((input) => {
+      input.addEventListener("change", (event) => {
+        const index = event.target.dataset.index;
+        const newQuantity = event.target.value;
+
+        if (newQuantity <= 0) {
+          alert("Quantity cannot be less than 1");
+          event.target.value = 1;
+        } else {
+          cart[index].quantity = newQuantity;
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+        location.reload();
+      });
+    });
+  });
+</script>

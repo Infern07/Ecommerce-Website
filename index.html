@@ -183,7 +183,7 @@
           Our Bestsellers
         </h2>
         <div
-          class="flex overflow-x-auto gap-6 py-4 scrollbar-hide"
+          class="flex overflow-x-auto gap-6 py-4"
           style="scroll-snap-type: x mandatory"
         >
           <!-- Product 1: Elegant Sofa -->
@@ -203,9 +203,17 @@
               <p class="text-gray-600">From ₹ 40,000.00</p>
               <a
                 href="elegantsofa.html"
-                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                class="px-4 py-2.5 mt-2 bg-yellow-500 text-center text-white rounded-lg hover:bg-yellow-400 transition mr-2"
                 >View Details</a
               >
+              <button
+                class="bg-orange-400 mt-2 text-white px-4 py-2 rounded-lg shadow-md add-to-cart-btn hover:bg-orange-500"
+                data-name="sofa"
+                data-price="40000"
+                data-image="./assets/images/elegantsofa.png"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -226,9 +234,17 @@
               <p class="text-gray-600">From ₹ 3,000.00</p>
               <a
                 href="modernlamp.html"
-                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                class="px-4 py-2.5 mt-2 bg-yellow-500 text-center text-white rounded-lg hover:bg-yellow-400 transition mr-2"
                 >View Details</a
               >
+              <button
+                class="bg-orange-400 mt-2 text-white px-4 py-2 rounded-lg shadow-md add-to-cart-btn hover:bg-orange-500"
+                data-name="modern lamp"
+                data-price="3000"
+                data-image="./assets/images/lmap.jpg"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -249,9 +265,17 @@
               <p class="text-gray-600">From ₹ 6,000.00</p>
               <a
                 href="comfychair.html"
-                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                class="px-4 py-2.5 mr-2 mt-2 bg-yellow-500 text-center text-white rounded-lg hover:bg-yellow-400 transition"
                 >View Details</a
               >
+              <button
+                class="bg-orange-400 mt-2 text-white px-4 py-2 rounded-lg shadow-md add-to-cart-btn hover:bg-orange-500"
+                data-name="comfy chair"
+                data-price="6000"
+                data-image="./assets/images/comfychair.jpg"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -272,9 +296,17 @@
               <p class="text-gray-600">From ₹ 14,000.00</p>
               <a
                 href="sixdiningtable.html"
-                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                class="mt-2 bg-yellow-500 text-center text-white py-2.5 mr-2 px-4 rounded-lg hover:bg-yellow-400 transition"
                 >View Details</a
               >
+              <button
+                class="bg-orange-400 mt-2 text-white px-4 py-2 rounded-lg shadow-md add-to-cart-btn hover:bg-orange-500"
+                data-name="diningtable"
+                data-price="14000"
+                data-image="./assets/images/diningtable.jpg"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -295,9 +327,17 @@
               <p class="text-gray-600">From ₹ 14,499.00</p>
               <a
                 href="megatronbed.html"
-                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                class="mt-2 bg-yellow-500 text-center text-white py-2.5 mr-2 px-4 rounded-lg hover:bg-yellow-400 transition"
                 >View Details</a
               >
+              <button
+                class="bg-orange-400 mt-2 text-white px-4 py-2 rounded-lg shadow-md add-to-cart-btn hover:bg-orange-500"
+                data-name="megatron bed"
+                data-price="14499"
+                data-image="./assets/images/Megatron_Bed_Dark_Grey_1.jpg"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -317,10 +357,18 @@
               <h3 class="text-xl font-semibold">Brown Resin Showpiece</h3>
               <p class="text-gray-600">From ₹ 3,000.00</p>
               <a
-                href="#"
-                class="block mt-4 bg-yellow-500 text-center text-white py-2 rounded hover:bg-yellow-400 transition"
+                href="brownresinshowpiece.html"
+                class="px-4 py-2.5 mr-2 mt-2 bg-yellow-500 text-center text-white rounded-lg hover:bg-yellow-400 transition"
                 >View Details</a
               >
+              <button
+                class="bg-orange-400 mt-2 text-white px-4 py-2 rounded-lg shadow-md add-to-cart-btn hover:bg-orange-500"
+                data-name="Brown Resin Showpiece"
+                data-price="3000"
+                data-image="./assets/images/resin.jpg"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -591,6 +639,26 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+        cartBtns.forEach((btn) => {
+          btn.addEventListener("click", (event) => {
+            const product = {
+              name: event.target.dataset.name,
+              price: event.target.dataset.price,
+              image: event.target.dataset.image,
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${product.name} has been added to the cart.`);
+          });
+        });
+      });
+    </script>
 
     <script src="./assets/js/script.js"></script>
   </body>
